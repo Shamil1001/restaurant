@@ -1,0 +1,44 @@
+.about {
+  background-color: white;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.about .taco {
+  display: flex;
+  flex-direction: row;
+}
+
+.about .taco img {
+  margin: 40px;
+}
+
+.about .taco .about-details {
+  margin-top: 90px;
+  margin-left: -30px;
+}
+
+.about .taco .about-details p,
+button {
+  font-size: 18px;
+  margin-top: 15px;
+}
+
+.about .taco .about-details button {
+  background-color: #ffc600;
+  color: black;
+  width: 125px;
+  height: 40px;
+  border-color: #ffc600;
+}
+
+.gallery .gallery-items img {
+  width: 200px;
+  margin: 15px;
+}
+
+.gallery .gallery-items {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
