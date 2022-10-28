@@ -34,11 +34,61 @@ button {
 
 .gallery .gallery-items img {
   width: 200px;
-  margin: 15px;
+  /* margin: 15px; */
 }
 
-.gallery .gallery-items {
+.gallery {
+  margin-top: 25px;
+}
+
+/* .gallery h2 {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+.gallery .gallery-items {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.gallery h2 {
+  display: grid;
+  grid-column: 1/-1;
+  grid-template-columns: 1fr auto 1fr;
+  grid-gap: 20px;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.gallery h2::before,
+h2::after {
+  display: block;
+  content: "";
+  height: 10px;
+  background: linear-gradient(
+    to var(--direction, left),
+    var(--yellow),
+    transparent
+  );
+}
+
+@media (max-width: 750px) {
+  .about .taco {
+    display: flex;
+    flex-direction: column;
+  }
+  .about .taco .about-details {
+    margin-left: 50px;
+    margin-bottom: 25px;
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .gallery .gallery-items img {
+    width: 100%;
+  }
 }
